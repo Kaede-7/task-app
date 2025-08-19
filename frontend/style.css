@@ -1,0 +1,177 @@
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.auth-section,
+.tasks-section {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #cccccc;
+  width: 100%;
+}
+
+input,
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #3a3a3a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  flex: 1;
+  min-width: 200px;
+}
+
+input::placeholder {
+  color: #aaaaaa;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+
+button:disabled {
+  background: #666666;
+  cursor: not-allowed;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #4a4a4a;
+  margin: 30px 0;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  background: #3a3a3a;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease;
+}
+
+.task-list li.completed {
+  background: #2f4f4f;
+}
+
+.task-list li div {
+  font-size: 0.9rem;
+  color: #cccccc;
+  flex: 1 1 100%;
+}
+
+.task-list li.completed div {
+  text-decoration: line-through;
+}
+
+.task-list li span {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.task-list li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #ffffff;
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  color: #cccccc;
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
